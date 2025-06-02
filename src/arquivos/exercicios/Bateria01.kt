@@ -1,9 +1,10 @@
-package arquivos
+package arquivos.exercicios
 
 fun main(){
-    soma()
-    calculoArea()
-    identificacao()
+    //soma()
+    //calculoArea()
+    //identificacao()
+    salario()
 }
 
 fun soma(){
@@ -43,5 +44,25 @@ fun identificacao(){
     val sexo = readLine()!![0]
 
     println("Nome: $nome | Sexo: $sexo")
+}
 
+fun salario(){
+    print("Digite o valor da hora-aula: ")
+    val ha = readLine()!!.toDouble()
+
+    print("Digite o número de horas trabalhadas: ")
+    val ht = readLine()!!.toDouble()
+
+    val pd = 0.2
+
+    val sb = ht * ha
+    val td = sb * pd
+
+    val sl = sb - td
+
+    println("Salário bruto: %.2f".format(sb))
+
+    println("Total do desconto: %.2f".format(td))
+
+    println("Salário liquido: %.2f".format(sl))
 }
