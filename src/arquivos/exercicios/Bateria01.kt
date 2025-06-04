@@ -5,8 +5,9 @@ fun main(){
     //calculoArea()
     //identificacao()
     //salario()
-    celsiusToFahrenheit()
-    fahremheitToCelsius()
+    //celsiusToFahrenheit()
+    //fahremheitToCelsius()
+    volumeLata()
 }
 
 fun soma(){
@@ -84,10 +85,23 @@ fun celsiusToFahrenheit(){
 }
 
 fun fahremheitToCelsius(){
+    //pag 146
     //C ← ((F – 32) * 5) / 9
     print("Digite a temperatura em graus Fahrenheit: ")
     val f = readLine()!!.toInt()
 
     val c : Int = ((f - 32) * 5 / 9)
     println("Temperatura em Celsius: $c graus C")
+}
+
+fun volumeLata(){
+    //pag 147
+    print("Digite o valor do raio da circunferência da lata: ")
+    val r = readLine()!!.toDouble()
+
+    print("Digite a altura da lata em centimetros: ")
+    val altura = readLine()!!.toDouble()
+
+    val volume : Double = 3.14159 * (r * r) * altura
+    println("Volume: %.2f".format(volume) + " m³")
 }
