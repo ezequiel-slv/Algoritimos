@@ -9,7 +9,8 @@ fun main(){
     //fahremheitToCelsius()
     //volumeLata()
     //gastoCombustivel()
-    taxaAtraso()
+    //taxaAtraso()
+    //trocavalores()
 }
 
 fun soma(){
@@ -135,4 +136,24 @@ fun taxaAtraso(){
 
     val prestacaoAtrasada : Double = valor + (valor * (taxa) * tempo)
     println("Prestação com taxa de atraso: $prestacaoAtrasada")
+}
+
+fun trocavalores(){
+    //pag 147
+    print("Digite o valor de A: ")
+    var a = readLine()!!.toInt()
+
+    print("Digite o valor de B: ")
+    var b = readLine()!!.toInt()
+
+    println("---Valores antes da troca---")
+    println(a)
+    println(b)
+
+    val temp = a
+    a = b
+    b = temp
+    println("---Valores depois da troca---")
+    println("Valor de A: $a")
+    println("Valor de B: $b")
 }
