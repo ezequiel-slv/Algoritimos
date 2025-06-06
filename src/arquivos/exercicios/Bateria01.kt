@@ -7,7 +7,9 @@ fun main(){
     //salario()
     //celsiusToFahrenheit()
     //fahremheitToCelsius()
-    volumeLata()
+    //volumeLata()
+    //gastoCombustivel()
+    taxaAtraso()
 }
 
 fun soma(){
@@ -104,4 +106,33 @@ fun volumeLata(){
 
     val volume : Double = 3.14159 * (r * r) * altura
     println("Volume: %.2f".format(volume) + " m³")
+}
+
+fun gastoCombustivel(){
+    //pag 147
+    //DISTÂNCIA ← TEMPO * VELOCIDADE
+    print("Digite o tempo gasto em horas na viagem: ")
+    val tempo = readLine()!!.toDouble()
+
+    print("Digite a velocidade média do carro em km/h: ")
+    val velocidade = readLine()!!.toDouble()
+
+    val distancia : Double = tempo * velocidade
+
+    val litrosUsados : Double = distancia / 12
+    println("Litros gastos na viagem. %.1f".format(litrosUsados) )
+}
+
+fun taxaAtraso(){
+    //PRESTAÇÃO ← VALOR + (VALOR * (TAXA / 100) * TEMPO)
+    print("Digite o valor da prestação; ")
+    val valor = readLine()!!.toDouble()
+
+    print("Digite os meses de atraso: ")
+    val tempo =  readLine()!!.toInt()
+
+    val taxa = 0.05
+
+    val prestacaoAtrasada : Double = valor + (valor * (taxa) * tempo)
+    println("Prestação com taxa de atraso: $prestacaoAtrasada")
 }
